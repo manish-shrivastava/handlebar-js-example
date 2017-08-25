@@ -1,0 +1,28 @@
+<div class="row">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Book Name</th>
+        <th>Book Price</th>
+        <th>Author</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @books.each do |book| %>
+        <tr>
+          <td><%= book.name %></td>
+          <td><%= book.price %></td>
+          <td><%= book.author %></td>
+          <td><%= link_to "Edit", "#", class: "edit-book btn btn-warning" %></button>
+            <%= link_to "Delete", "#{}", class: "delete-book btn btn-danger" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div>
+    <button id='new-book' class="btn btn-lg btn-primary">Add New Book</button>
+  </div>
+</div>
